@@ -1,0 +1,24 @@
+{
+  "name": "clear-path",
+  "version": "1.0.0",
+  "description": "simple script to delete a path if exists",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkiss/clear-path.git"
+  },
+  "author": "Vinicius Kiss <contato@vkiss.com.br> (https://vkiss.com.br)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vkiss/clear-path/issues"
+  },
+  "homepage": "https://github.com/vkiss/clear-path#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "del": "^6.0.0"
+  },
+  "devDependencies": {}
+}
