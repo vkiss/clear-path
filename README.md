@@ -44,8 +44,6 @@ dist/*.png
 dist/*.jpg
 ```
 
-Running this will create a .webp copy on the same path as any .png or .jpg file (node_modules is excluded by default).
-
 ## How (in JS)
 ```js
 const clearPath = require( "clear-path" );
