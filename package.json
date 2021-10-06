@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/vkiss/clear-path.git"
   },
-  "author": "Vinicius Kiss <contato@vkiss.com.br>",
+  "author": "Vinicius Kiss <contato@vkiss.com.br> (https://www.vkiss.com.br/)",
   "bin": "./bin/clear-path.js",
   "main": "./lib/index.js",
   "files": [
