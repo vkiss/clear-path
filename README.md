@@ -20,7 +20,7 @@ npm i clear-path --save-dev
 }
 ```
 
-The `clearpath` value can a string, or an array of strings of glob patterns.
+The `clearpath` value can a string, or an array of glob patterns strings.
 
 ## Configuration
 

@@ -18,11 +18,21 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "delete",
-    "files",
-    "clear",
     "clean",
-    "del"
+    "cleanup",
+    "clear",
+    "del",
+    "delete",
+    "destroy",
+    "directory",
+    "glob",
+    "files",
+    "folder",
+    "remove",
+    "rm",
+    "rmrf",
+    "rimraf",
+    "trash"
   ],
   "bugs": {
     "url": "https://github.com/vkiss/clear-path/issues"
