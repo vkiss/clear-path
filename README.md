@@ -50,3 +50,38 @@ const clearPath = require( "clear-path" );
 
 clearPath("dist");
 ```
+
+## Multiple clear-path routines
+
+### Example: package.json
+
+Chose either one of the configurations samples below.
+
+```json
+# package.json
+{
+  "scripts": {
+    "clean": "clear-path --routine=all",
+    "clean:dist": "clear-path --routine=dist"
+  },
+  "clearpath": {
+    "routine": {
+      "all": [
+        "dist",
+        "public"
+      ],
+      "dist": "dist",
+    }
+  }
+}
+```
+
+### Example: clearpath.rc
+
+```yml
+routine:
+  all:
+    dist
+    public
+  dist: dist
+```
