@@ -15,7 +15,8 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install",
+    "precommit": "lint-staged"
   },
   "keywords": [
     "clean",
@@ -42,5 +43,16 @@
     "chalk": "^4.1.2",
     "cosmiconfig": "^7.0.1",
     "del": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.15.8",
+    "eslint": "^8.0.1",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
   }
 }
