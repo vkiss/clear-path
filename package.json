@@ -1,6 +1,6 @@
 {
   "name": "clear-path",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A node library for deleteing a path if exists using del",
   "license": "MIT",
   "repository": {
@@ -42,10 +42,5 @@
     "chalk": "^4.1.2",
     "cosmiconfig": "^7.0.1",
     "del": "^6.0.0"
-  },
-  "clearpath": {
-    "routine": {
-      "teste": "dist"
-    }
   }
 }
