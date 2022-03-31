@@ -1,3 +1,9 @@
+## 1.3
+> **Publishing date:** 2022-03-31
+
+- **Feat:** JS: options.silent
+- **Feat:** JS: options.callback
+
 ## 1.2
 > **Publishing date:** 2021-10-07
 

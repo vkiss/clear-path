@@ -51,6 +51,27 @@ const clearPath = require( "clear-path" );
 clearPath("dist");
 ```
 
+### options
+> These options can only be changed when using `clear-path` in JS.
+
+```js
+clearPath("dist", {
+  silent: true,
+  callback: (files) => {
+    console.log("Deleted theses files: ", files)
+  }
+})
+```
+
+#### options.silent
+
+**Default:** `false`\
+If set to true, will not console log deleted files.
+
+#### options.callback
+
+If you declara a function in your `options.callback`, will execute after deleting files.
+
 ## Multiple clear-path routines
 
 ### Example: package.json
