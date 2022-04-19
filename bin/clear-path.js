@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const { cosmiconfig } = require( "cosmiconfig" );
-const chalk = require( "chalk" );
+import { cosmiconfig } from "cosmiconfig";
+import chalk from "chalk";
 
-const clearPath = require( "../lib" );
+import clearPath from "../lib/index.js";
 
 const { info } = console;
 
@@ -19,8 +19,8 @@ const filterConfig = ( config ) => {
 };
 
 const displayError = ( title ) => {
-  info( chalk.red( ">" ), chalk.bold.red( title ) );
-  info( chalk.gray( "> read https://github.com/vkiss/clear-path/blob/main/README.md#configuration to learn how to configure clear-path.js" ) );
+  info( chalk.red( "*" ), chalk.bold.red( title ) );
+  info( chalk.gray( "* read https://github.com/vkiss/clear-path/blob/main/README.md#configuration to learn how to configure clear-path.js" ) );
 };
 
 const getRoutine = ( args ) => {
