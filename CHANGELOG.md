@@ -1,3 +1,10 @@
+## 1.3.1
+> **Publishing date:** 2022-04-19
+
+- **Feat:** CLI: --silent
+- **Refac:** package.module
+- **Build:** Update dev packages
+
 ## 1.3
 > **Publishing date:** 2022-03-31
 
