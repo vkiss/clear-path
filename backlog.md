@@ -1,3 +1,0 @@
-# Feats
-
-- Silent CLI param;

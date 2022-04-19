@@ -33,15 +33,15 @@ const getRoutine = ( args ) => {
   return undefined;
 };
 
-const clearPathArrayOrString = ( pathsToDelete ) => {
+const clearPathArrayOrString = ( pathsToDelete, options ) => {
   if ( typeof( pathsToDelete ) === "string" ) {
-    clearPath( pathsToDelete );
+    clearPath( pathsToDelete, options );
     return;
   }
 
   if ( Array.isArray( pathsToDelete ) ) {
     for ( const path of pathsToDelete ) {
-      clearPath( path );
+      clearPath( path, options );
     }
     return;
   }
@@ -50,8 +50,20 @@ const clearPathArrayOrString = ( pathsToDelete ) => {
 };
 
 const runScript = () => {
+  const { argv } = process;
+  const isSilent = argv.includes( "--silent" );
+
   // Script start message
-  info( chalk.gray( "> clear-path.js" ) );
+  if ( !isSilent ) {
+    info( chalk.gray( "> clear-path.js" ) );
+  }
+
+  const config = {
+    silent: false,
+    callback: false
+  };
+
+  config.silent = isSilent;
 
   const explorer = cosmiconfig( "clearpath" );
 
@@ -64,18 +76,17 @@ const runScript = () => {
       const pathsToDelete = filterConfig( result.config );
 
       if ( pathsToDelete.routine ) {
-        const args = process.argv.slice( 2 );
-        const argRoutine = getRoutine( args );
+        const argRoutine = getRoutine( argv.slice( 2 ) );
 
         if ( argRoutine ) {
           const routineToRun = pathsToDelete.routine[argRoutine];
 
           if ( routineToRun ) {
-            return clearPathArrayOrString( routineToRun );
+            return clearPathArrayOrString( routineToRun, config );
           }
 
           if ( pathsToDelete.routine.default ) {
-            return clearPathArrayOrString( pathsToDelete.routine.default );
+            return clearPathArrayOrString( pathsToDelete.routine.default, config );
           }
 
           return displayError( `routine '${argRoutine}' not found` );
@@ -84,7 +95,7 @@ const runScript = () => {
         return displayError( "missing routine parameter" );
       }
 
-      clearPathArrayOrString( pathsToDelete );
+      clearPathArrayOrString( pathsToDelete, config );
 
     } )
     .catch( ( error ) => {

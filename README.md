@@ -52,7 +52,6 @@ clearPath("dist");
 ```
 
 ### options
-> These options can only be changed when using `clear-path` in JS.
 
 ```js
 clearPath("dist", {
@@ -63,14 +62,16 @@ clearPath("dist", {
 })
 ```
 
-#### options.silent
+### options.silent
 
 **Default:** `false`\
 If set to true, will not console log deleted files.
 
-#### options.callback
+> You can activate options.silent from cli commands using `clear-path --silent` or `clear-path --routine:{routine_name} --silent`
 
-If you declara a function in your `options.callback`, will execute after deleting files.
+### options.callback
+
+If you declara a function in your `options.callback`, it will execute after deleting files.
 
 ## Multiple clear-path routines
 
