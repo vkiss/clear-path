@@ -1,3 +1,9 @@
+## 1.3.2
+> **Publishing date:** 2022-05-31
+
+- **Build:** Update del dependency
+- **Revert:** package.module
+
 ## 1.3.1
 > **Publishing date:** 2022-04-19
 

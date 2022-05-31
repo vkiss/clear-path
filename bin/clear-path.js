@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import { cosmiconfig } from "cosmiconfig";
-import chalk from "chalk";
+const { cosmiconfig } = require( "cosmiconfig" );
+const chalk = require( "chalk" );
 
-import clearPath from "../lib/index.js";
+const clearPath = require( "../lib" );
 
 const { info } = console;
 
