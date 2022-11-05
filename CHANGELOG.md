@@ -1,3 +1,8 @@
+## 1.3.3
+> **Publishing date:** 2022-11-05
+
+- **Build:** Moved @babel/core to devDependencies
+
 ## 1.3.2
 > **Publishing date:** 2022-05-31
 
