@@ -14,11 +14,6 @@
     "bin",
     "lib"
   ],
-  "scripts": {
-    "prepare": "husky install",
-    "precommit": "lint-staged",
-    "lint": "eslint **/*.js"
-  },
   "keywords": [
     "clean",
     "cleanup",
@@ -43,19 +38,7 @@
   "dependencies": {
     "chalk": "4.1.2",
     "cosmiconfig": "^7.0.1",
-    "del": "6.1.1"
-  },
-  "devDependencies": {
-    "@babel/core": "~7.20.2",
-    "@babel/eslint-parser": "^7.19.1",
-    "eslint": "^8.26.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix"
-    ]
+    "del": "^6.0.0"
   },
   "clearpath": [
     "dist"
